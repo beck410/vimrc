@@ -1,11 +1,10 @@
 set term=xterm
 let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
-
 "pathogen plugin bundle
 execute pathogen#infect()
-
-"color
+call pathogen#helptags()
+""color
 set t_Co=256
 syntax on
 set background=dark
@@ -20,7 +19,7 @@ set softtabstop=2
 set smartindent
 "word wrap
 set wrap
-"changes alarm sound to visual
+""hanges alarm sound to visual
 set visualbell
 " Behave like Vim instead of Vi
 set nocompatible
@@ -32,6 +31,6 @@ set ttyfast
 set mouse=a
 " Set this to the name of your terminal that supports mouse codes.
 " Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
-set ttymouse=xterm
+set ttymouse=xterm2
 "??
 filetype plugin indent on
