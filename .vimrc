@@ -4,11 +4,13 @@ let &t_AF="\e[38;5;%dm"
 "pathogen plugin bundle
 execute pathogen#infect()
 call pathogen#helptags()
-""color
+""color & syntax
 set t_Co=256
-syntax on
+syntax enable
 set background=dark
-colors pablo
+colo pablo
+set hlsearch
+" highlight Comment ctermbg=DarkGray
 "numbers lines
 set number
 "tabs
@@ -34,3 +36,10 @@ set mouse=a
 set ttymouse=xterm2
 "??
 filetype plugin indent on
+
+" js syntax highlighting
+au FileType javascript call JavaScriptFold()
+" Airline plugin
+let g:airline#extensions#tabline#enabled = 1
+"tagbar plugin
+nmap <F8> :TagbarToggle<CR>
